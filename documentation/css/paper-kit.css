@@ -5984,8 +5984,7 @@ textarea.form-control {
 }
 
 .moving-clouds {
-  position: absolute;
-  z-index: 1;
+  position: relative !important;
   bottom: 0;
   left: 0;
   width: 250.625em;
