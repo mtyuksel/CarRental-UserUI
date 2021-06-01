@@ -1,40 +1,52 @@
 <div class="page-header section-dark" style="background-image: url('assets/img/antoine-barres.jpg')">
     <div class="filter"></div>
     <div class="content-center">
-        <div class="container" style="margin-bottom:00px;">
+        <div class="container">
             <div class="title-brand">
-                <div class="search-panel">
-                    <div class="motto text-center">
-                        <form action="">
-                            <div class="row">
-                                <div class="col-md-4 form-group">
-                                    <input _ngcontent-ahb-c111="" type="text" placeholder="Location"
-                                        aria-describedby="basic-addon1" class="form-control">
-                                </div>
-                                <div class="col-md-4 form-group">
-                                    <input _ngcontent-ait-c104="" placeholder="yyyy-mm-dd" name="dp" ngbdatepicker=""
-                                        class="form-control ng-pristine ng-valid ng-touched" ng-reflect-name="dp">
-                                </div>
-                                <div class="col-md-4 form-group">
-                                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                                        class="btn btn-outline-neutral btn-round"> Search Rent <i
-                                            class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                        </form>
+                <div class="motto text-center">
+                    <h1 class="presentation-title">Car Rental</h1>
+                    <div class="fog-low">
+                        <img src="assets/img/fog-low.png" alt="">
+                    </div>
+                    <div class="fog-low right">
+                        <img src="assets/img/fog-low.png" alt="">
                     </div>
                 </div>
-                <h1 class="presentation-title">Car Rental</h1>
-                <div class="fog-low">
-                    <img src="assets/img/fog-low.png" alt="">
-                </div>
-                <div class="fog-low right">
-                    <img src="assets/img/fog-low.png" alt="">
+                <div class="slogan">
+                    <h2 class="presentation-subtitle text-center">Search For The Best Rent Option, Take Your Car in 3
+                        Steps!
+                    </h2>
                 </div>
             </div>
-            <div class="slogan">
-                <h2 class="presentation-subtitle text-center">Search For The Best Rent Option, Take Your Car in 3 Steps!</h2>
-            </div>            
+            <div class="search-panel">
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <input id="inp-location" _ngcontent-ahb-c111="" type="text" placeholder="Location" aria-describedby="basic-addon1"
+                            class="form-control" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name" (click)="setCurrentLocation(option)">
+                                {{option.name}}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group date" [ngClass]="{'input-group-focus':focus===true}">
+                            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model"
+                                ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus=true"
+                                (blur)="focus=false" />
+                            <div class="input-group-append">
+                                <span class="glyphicon glyphicon-calendar input-group-text">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <button type="button" class="btn btn-outline-neutral btn-round" (click)="submitClick()">
+                            Search Rent <i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
