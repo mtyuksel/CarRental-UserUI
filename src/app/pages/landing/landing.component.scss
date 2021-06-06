@@ -1,13 +1,25 @@
 .moving-clouds {
-    z-index: auto !important;
+  z-index: auto !important;
 }
 
 .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.search-panel {
+  margin-top: 20px;
+}
+
+.top-panel {
+  margin-top: 120px;
+}
+
+.info-title {
+  padding-bottom: 10px;
+}

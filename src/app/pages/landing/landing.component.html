@@ -1,39 +1,41 @@
 <div class="page-header section-dark" style="background-image: url('assets/img/antoine-barres.jpg')">
     <div class="filter"></div>
-    <div class="content-center">
+    <div class="content-center top-panel">
         <div class="container">
             <div class="title-brand">
                 <div class="motto text-center">
                     <h1 class="presentation-title">Car Rental</h1>
                     <div class="fog-low">
-                        <img src="assets/img/fog-low.png" alt="">
+                        <img src="assets/img/fog-low.png" alt="" />
                     </div>
                     <div class="fog-low right">
-                        <img src="assets/img/fog-low.png" alt="">
+                        <img src="assets/img/fog-low.png" alt="" />
                     </div>
                 </div>
                 <div class="slogan">
-                    <h2 class="presentation-subtitle text-center">Search For The Best Rent Option, Take Your Car in 3
-                        Steps!
+                    <h2 class="presentation-subtitle text-center">
+                        Search For The Best Rent Option, Take Your Car in 3 Steps!
                     </h2>
                 </div>
             </div>
             <div class="search-panel">
                 <div class="row">
                     <div class="col-md-4 form-group">
-                        <input id="inp-location" _ngcontent-ahb-c111="" type="text" placeholder="Location" aria-describedby="basic-addon1"
-                            class="form-control" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                        <input id="inp-location" _ngcontent-ahb-c111="" type="text" placeholder="Location"
+                            aria-describedby="basic-addon1" class="form-control" matInput [formControl]="myControl"
+                            [matAutocomplete]="auto" />
                         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name" (click)="setCurrentLocation(option)">
-                                {{option.name}}
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name"
+                                (click)="setCurrentLocation(option)">
+                                {{ option.name }}
                             </mat-option>
                         </mat-autocomplete>
                     </div>
                     <div class="col-md-4 form-group">
-                        <div class="input-group date" [ngClass]="{'input-group-focus':focus===true}">
+                        <div class="input-group date" [ngClass]="{ 'input-group-focus': focus === true }">
                             <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model"
-                                ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus=true"
-                                (blur)="focus=false" />
+                                ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus = true"
+                                (blur)="focus = false" />
                             <div class="input-group-append">
                                 <span class="glyphicon glyphicon-calendar input-group-text">
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -43,22 +45,23 @@
                     </div>
                     <div class="col-md-4 form-group">
                         <button type="button" class="btn btn-outline-neutral btn-round" (click)="submitClick()">
-                            Search Rent <i class="fa fa-search"></i></button>
+                            Search Rent <i class="fa fa-search"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
-    <h6 class=" category-absolute ml-auto mr-auto">Designed and coded by
+    <div class="moving-clouds" style="background-image: url('assets/img/clouds.png')"></div>
+    <h6 class="category-absolute ml-auto mr-auto">
+        Designed and coded by
         <!-- <h6 class="category category-absolute">Designed and coded by -->
 
         <a href="https://www.creative-tim.com" target="_blank">
-            <img src="assets/img/creative-tim-white-slim2.png" class="creative-tim-logo">
+            <img src="assets/img/creative-tim-white-slim2.png" class="creative-tim-logo" />
         </a>
     </h6>
 </div>
-
 
 <!-- <div class="page-header" data-parallax="true" style="background-image: url('./assets/img/daniel-olahh.jpg');">
     <div class="filter"></div>
@@ -77,71 +80,60 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mr-auto ml-auto">
-                    <h2 class="title">Let's talk product</h2>
-                    <h5 class="description">This is the paragraph where you can write more details about your product.
-                        Keep you user engaged by providing meaningful information. Remember that by this time, the user
-                        is curious, otherwise he wouldn't scroll to get here. Add a button if you want the user to see
-                        more.</h5>
-                    <br>
+                    <h2 class="title">Why Car Rental?</h2>
+                    <h5 class="description">
+                        Car Rental provides you with the opportunity to rent the most amazing vehicles. With the help of
+                        the search panel, you can list the most suitable vehicles and buy them easily in 3 steps.
+                    </h5>
+                    <br />
                     <a href="#paper-kit" class="btn btn-danger btn-round">See Details</a>
                 </div>
             </div>
             <br /><br />
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="info">
                         <div class="icon icon-danger">
                             <i class="nc-icon nc-album-2"></i>
                         </div>
-                        <div class="description">
-                            <h4 class="info-title">Beautiful Gallery</h4>
-                            <p class="description">Spend your time generating new ideas. You don't have to think of
-                                implementing.</p>
-                            <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+                        <div class="description info-title">
+                            <h4 class="info-title">Check Pictures</h4>
+                            <p class="description">
+                                You can browse the photos of the vehicle you want to rent.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="info">
                         <div class="icon icon-danger">
                             <i class="nc-icon nc-bulb-63"></i>
                         </div>
-                        <div class="description">
+                        <div class="description info-title">
                             <h4 class="info-title">New Ideas</h4>
-                            <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient.</p>
-                            <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+                            <p>
+                                Larger, yet dramatically thinner. More powerful, but remarkably
+                                power efficient.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="info">
                         <div class="icon icon-danger">
                             <i class="nc-icon nc-chart-bar-32"></i>
                         </div>
-                        <div class="description">
+                        <div class="description info-title">
                             <h4 class="info-title">Statistics</h4>
-                            <p>Choose from a veriety of many colors resembling sugar paper pastels.</p>
-                            <a href="#pkp" class="btn btn-link btn-danger">See more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="info">
-                        <div class="icon icon-danger">
-                            <i class="nc-icon nc-sun-fog-29"></i>
-                        </div>
-                        <div class="description">
-                            <h4 class="info-title">Delightful design</h4>
-                            <p>Find unique and handmade delightful designs related items directly from our sellers.</p>
-                            <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+                            <p>
+                                Find the most suitable vehicle by comparing all vehicles.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
     <div class="section section-dark text-center">
         <div class="container">
             <h2 class="title">Let's talk about us</h2>
@@ -149,7 +141,7 @@
                 <div class="col-md-4">
                     <div class="card card-profile card-plain">
                         <div class="card-avatar">
-                            <a href="#avatar"><img src="./assets/img/faces/clem-onojeghuo-3.jpg" alt="..."></a>
+                            <a href="#avatar"><img src="./assets/img/faces/clem-onojeghuo-3.jpg" alt="..." /></a>
                         </div>
                         <div class="card-block">
                             <a href="#paper-kit">
@@ -159,8 +151,9 @@
                                 </div>
                             </a>
                             <p class="card-description text-center">
-                                Teamwork is so important that it is virtually impossible for you to reach the heights of
-                                your capabilities or make the money that you want without becoming very good at it.
+                                Teamwork is so important that it is virtually impossible for you
+                                to reach the heights of your capabilities or make the money that
+                                you want without becoming very good at it.
                             </p>
                         </div>
                         <div class="card-footer text-center">
@@ -177,7 +170,7 @@
                 <div class="col-md-4">
                     <div class="card card-profile card-plain">
                         <div class="card-avatar">
-                            <a href="#avatar"><img src="./assets/img/faces/joe-gardner-2.jpg" alt="..."></a>
+                            <a href="#avatar"><img src="./assets/img/faces/joe-gardner-2.jpg" alt="..." /></a>
                         </div>
                         <div class="card-block">
                             <a href="#paper-kit">
@@ -187,9 +180,9 @@
                                 </div>
                             </a>
                             <p class="card-description text-center">
-                                A group becomes a team when each member is sure enough of himself and his contribution
-                                to praise the skill of the others. No one can whistle a symphony. It takes an orchestra
-                                to play it.
+                                A group becomes a team when each member is sure enough of
+                                himself and his contribution to praise the skill of the others.
+                                No one can whistle a symphony. It takes an orchestra to play it.
                             </p>
                         </div>
                         <div class="card-footer text-center">
@@ -206,7 +199,7 @@
                 <div class="col-md-4">
                     <div class="card card-profile card-plain">
                         <div class="card-avatar">
-                            <a href="#avatar"><img src="./assets/img/faces/erik-lucatero-2.jpg" alt="..."></a>
+                            <a href="#avatar"><img src="./assets/img/faces/erik-lucatero-2.jpg" alt="..." /></a>
                         </div>
                         <div class="card-block">
                             <a href="#paper-kit">
@@ -216,9 +209,9 @@
                                 </div>
                             </a>
                             <p class="card-description text-center">
-                                The strength of the team is each individual member. The strength of each member is the
-                                team. If you can laugh together, you can work together, silence isn’t golden, it’s
-                                deadly.
+                                The strength of the team is each individual member. The strength
+                                of each member is the team. If you can laugh together, you can
+                                work together, silence isn’t golden, it’s deadly.
                             </p>
                         </div>
                         <div class="card-footer text-center">
@@ -244,22 +237,23 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Name</label>
-                                <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group" [ngClass]="{ 'input-group-focus': focus === true }">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Name" (focus)="focus=true"
-                                        (blur)="focus=false">
+                                    <input type="text" class="form-control" placeholder="Name" (focus)="focus = true"
+                                        (blur)="focus = false" />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <label>Email</label>
-                                <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
+                                <div class="input-group" [ngClass]="{ 'input-group-focus': focus1 === true }">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"> <i class="nc-icon nc-email-85"></i></span>
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-email-85"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Email" (focus)="focus1=true"
-                                        (blur)="focus1=false">
+                                    <input type="text" class="form-control" placeholder="Email" (focus)="focus1 = true"
+                                        (blur)="focus1 = false" />
                                 </div>
                             </div>
                         </div>
@@ -268,7 +262,9 @@
                             placeholder="Tell us your thoughts and feelings..."></textarea>
                         <div class="row">
                             <div class="col-md-4 mr-auto ml-auto">
-                                <button class="btn btn-danger btn-lg btn-fill">Send Message</button>
+                                <button class="btn btn-danger btn-lg btn-fill">
+                                    Send Message
+                                </button>
                             </div>
                         </div>
                     </form>
